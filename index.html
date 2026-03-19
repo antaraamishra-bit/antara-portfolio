@@ -8,149 +8,213 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  body {
-    font-family: 'Inter', sans-serif;
-    background: #fff;
-    color: #111;
-    overflow-x: hidden;
-  }
+html {
+  scroll-behavior: smooth;
+}
 
-  section {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    padding: 0 10%;
-  }
+body {
+  font-family: 'Inter', sans-serif;
+  background: #ffffff;
+  color: #111;
+}
 
-  h1 {
-    font-size: 4rem;
-    line-height: 1.2;
-  }
+/* NAVBAR */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 10%;
+  display: flex;
+  justify-content: space-between;
+  background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
 
-  h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-  }
+nav a {
+  text-decoration: none;
+  color: #111;
+  margin-left: 20px;
+  font-weight: 500;
+  transition: 0.3s;
+}
 
-  p {
-    font-size: 1.2rem;
-    max-width: 600px;
-    color: #444;
-  }
+nav a:hover {
+  opacity: 0.5;
+}
 
-  .big-text {
-    font-size: 3rem;
-    font-weight: 600;
-    max-width: 800px;
-  }
+/* SECTIONS */
+section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 10%;
+}
 
-  ul {
-    margin-top: 20px;
-  }
+.alt {
+  background: #f7f7f7;
+}
 
-  li {
-    margin-bottom: 10px;
-    font-size: 1.1rem;
-  }
+/* TEXT */
+h1 {
+  font-size: 4rem;
+  line-height: 1.2;
+}
 
-  /* Scroll animation */
-  .fade {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: all 0.8s ease;
-  }
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
 
-  .fade.show {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.big {
+  font-size: 2.5rem;
+  font-weight: 600;
+  max-width: 800px;
+}
 
-  /* Alternating background */
-  .alt {
-    background: #f7f7f7;
-  }
+p {
+  font-size: 1.2rem;
+  color: #444;
+  max-width: 600px;
+}
+
+ul {
+  margin-top: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+/* HOVER CARDS */
+.card {
+  padding: 20px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  background: #fff;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* ANIMATION */
+.fade {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.8s ease;
+}
+
+.fade.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 40px;
+  color: #777;
+}
 
 </style>
 </head>
 
 <body>
 
+<!-- NAVBAR -->
+<nav>
+  <div><strong>Antara</strong></div>
+  <div>
+    <a href="#about">About</a>
+    <a href="#academics">Academics</a>
+    <a href="#sports">Sports</a>
+    <a href="#music">Music</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
 <!-- HERO -->
 <section>
   <div class="fade">
     <h1>Antara Mishra</h1>
-    <p class="big-text">
+    <p class="big">
       Student. Athlete. Musician.  
       Building excellence across everything I do.
     </p>
   </div>
 </section>
 
-<!-- PROFILE -->
-<section class="alt">
+<!-- ABOUT -->
+<section id="about" class="alt">
   <div class="fade">
-    <h2>About Me</h2>
+    <h2>About</h2>
     <p>
-      I’m a Grade 8 student from Bengaluru, driven by curiosity, energy, and a strong commitment to growth across academics, sports, and music.
+      I’m a Grade 8 student from Bengaluru driven by curiosity, discipline, and a strong commitment to growth across academics, sports, and music.
     </p>
   </div>
 </section>
 
 <!-- ACADEMICS -->
-<section>
+<section id="academics">
   <div class="fade">
     <h2>Academics</h2>
-    <p class="big-text">
-      Consistently performing at the top level in Olympiads and standardized testing.
-    </p>
-    <ul>
-      <li>Multiple Gold Medals – SOF Olympiads</li>
-      <li>PSAT – 95th Percentile</li>
-      <li>INSPIRE Awards MANAK Participant</li>
-      <li>Logiquids – Zonal Rank 60</li>
-    </ul>
+    <p class="big">Top performance across Olympiads and competitive exams.</p>
+
+    <div class="card">
+      <ul>
+        <li>Gold Medals – SOF Olympiads</li>
+        <li>PSAT – 95th Percentile</li>
+        <li>INSPIRE Awards MANAK</li>
+        <li>Logiquids – Rank 60 (Zonal)</li>
+      </ul>
+    </div>
   </div>
 </section>
 
 <!-- SPORTS -->
-<section class="alt">
+<section id="sports" class="alt">
   <div class="fade">
     <h2>Sports</h2>
-    <p class="big-text">
-      Competitive athlete across cricket, athletics, football, and golf.
-    </p>
-    <ul>
-      <li>Multiple Gold Medals in Athletics</li>
-      <li>KSCA U-15 Selections (2x)</li>
-      <li>Pre-Subroto Cup Winner</li>
-      <li>Most Promising Player – Interschool Cricket</li>
-    </ul>
+    <p class="big">Competitive athlete across multiple disciplines.</p>
+
+    <div class="card">
+      <ul>
+        <li>Cricket – KSCA U-15 Selections</li>
+        <li>Athletics – Multiple Gold Medals</li>
+        <li>Football – Subroto Cup Winner</li>
+        <li>Most Promising Player – Cricket</li>
+      </ul>
+    </div>
   </div>
 </section>
 
 <!-- MUSIC -->
-<section>
+<section id="music">
   <div class="fade">
     <h2>Music</h2>
-    <p class="big-text">
-      9+ years of training with strong classical and western foundation.
-    </p>
-    <ul>
-      <li>Karnataka State Exam – Distinction</li>
-      <li>40+ compositions learned</li>
-      <li>School choir performer</li>
-    </ul>
+    <p class="big">9+ years of training and performance experience.</p>
+
+    <div class="card">
+      <ul>
+        <li>Karnataka State Exam – Distinction</li>
+        <li>40+ compositions</li>
+        <li>Western + Classical training</li>
+      </ul>
+    </div>
   </div>
 </section>
 
 <!-- CONTACT -->
-<section class="alt">
+<section id="contact" class="alt">
   <div class="fade">
     <h2>Contact</h2>
     <p>
@@ -161,18 +225,22 @@
   </div>
 </section>
 
+<footer>
+  © 2026 Antara Mishra
+</footer>
+
 <script>
-  const fades = document.querySelectorAll('.fade');
+const fades = document.querySelectorAll('.fade');
 
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('show');
-      }
-    });
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
   });
+});
 
-  fades.forEach(el => observer.observe(el));
+fades.forEach(el => observer.observe(el));
 </script>
 
 </body>
