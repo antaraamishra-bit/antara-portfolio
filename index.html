@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Antara Mishra</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #fff;
+    color: #111;
+    overflow-x: hidden;
+  }
+
+  section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+  }
+
+  h1 {
+    font-size: 4rem;
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    color: #444;
+  }
+
+  .big-text {
+    font-size: 3rem;
+    font-weight: 600;
+    max-width: 800px;
+  }
+
+  ul {
+    margin-top: 20px;
+  }
+
+  li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+  }
+
+  /* Scroll animation */
+  .fade {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+  }
+
+  .fade.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Alternating background */
+  .alt {
+    background: #f7f7f7;
+  }
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section>
+  <div class="fade">
+    <h1>Antara Mishra</h1>
+    <p class="big-text">
+      Student. Athlete. Musician.  
+      Building excellence across everything I do.
+    </p>
+  </div>
+</section>
+
+<!-- PROFILE -->
+<section class="alt">
+  <div class="fade">
+    <h2>About Me</h2>
+    <p>
+      I’m a Grade 8 student from Bengaluru, driven by curiosity, energy, and a strong commitment to growth across academics, sports, and music.
+    </p>
+  </div>
+</section>
+
+<!-- ACADEMICS -->
+<section>
+  <div class="fade">
+    <h2>Academics</h2>
+    <p class="big-text">
+      Consistently performing at the top level in Olympiads and standardized testing.
+    </p>
+    <ul>
+      <li>Multiple Gold Medals – SOF Olympiads</li>
+      <li>PSAT – 95th Percentile</li>
+      <li>INSPIRE Awards MANAK Participant</li>
+      <li>Logiquids – Zonal Rank 60</li>
+    </ul>
+  </div>
+</section>
+
+<!-- SPORTS -->
+<section class="alt">
+  <div class="fade">
+    <h2>Sports</h2>
+    <p class="big-text">
+      Competitive athlete across cricket, athletics, football, and golf.
+    </p>
+    <ul>
+      <li>Multiple Gold Medals in Athletics</li>
+      <li>KSCA U-15 Selections (2x)</li>
+      <li>Pre-Subroto Cup Winner</li>
+      <li>Most Promising Player – Interschool Cricket</li>
+    </ul>
+  </div>
+</section>
+
+<!-- MUSIC -->
+<section>
+  <div class="fade">
+    <h2>Music</h2>
+    <p class="big-text">
+      9+ years of training with strong classical and western foundation.
+    </p>
+    <ul>
+      <li>Karnataka State Exam – Distinction</li>
+      <li>40+ compositions learned</li>
+      <li>School choir performer</li>
+    </ul>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="alt">
+  <div class="fade">
+    <h2>Contact</h2>
+    <p>
+      Bengaluru, India<br><br>
+      📧 antaraamishra@gmail.com<br>
+      📞 +91 89513 95946
+    </p>
+  </div>
+</section>
+
+<script>
+  const fades = document.querySelectorAll('.fade');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  });
+
+  fades.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
